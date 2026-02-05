@@ -1,0 +1,120 @@
+/* App-specific styles */
+
+/* Ensure smooth number transitions */
+.number-display {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  transition: all 0.3s ease-out;
+}
+
+/* Custom scrollbar for warning lists */
+.max-h-\\[140px\\]::-webkit-scrollbar {
+  width: 4px;
+}
+
+.max-h-\\[140px\\]::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.max-h-\\[140px\\]::-webkit-scrollbar-thumb {
+  background: #2A2A35;
+  border-radius: 2px;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Chart area styling */
+.recharts-wrapper {
+  cursor: crosshair !important;
+}
+
+.recharts-active-dot {
+  filter: drop-shadow(0 0 8px rgba(28, 105, 210, 0.6));
+}
+
+/* Glass effect enhancement */
+.glass-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    gap: 12px;
+  }
+
+  h1 {
+    font-size: 1.25rem !important;
+  }
+
+  h2 {
+    font-size: 1rem !important;
+  }
+}
+
+/* Focus states for accessibility */
+button:focus-visible {
+  outline: 2px solid #1C69D2;
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
