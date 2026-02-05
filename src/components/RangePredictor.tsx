@@ -1,13 +1,12 @@
 import { motion } from 'framer-motion';
 import { Navigation, Gauge, Leaf, Wind } from 'lucide-react';
-import type { RangePrediction, StateOfCharge } from '../types/battery';
+import type { RangePrediction } from '../types/battery';
 
 interface RangePredictorProps {
     range: RangePrediction;
-    soc: StateOfCharge;
 }
 
-const RangePredictor: React.FC<RangePredictorProps> = ({ range, soc }) => {
+const RangePredictor: React.FC<RangePredictorProps> = ({ range }) => {
     // Animation variants for range values
     const numberVariants = {
         hidden: { opacity: 0, y: 10 },

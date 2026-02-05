@@ -7,7 +7,7 @@ import LiveChart from './components/LiveChart';
 import HealthMonitor from './components/HealthMonitor';
 import RangePredictor from './components/RangePredictor';
 import CellGrid from './components/CellGrid';
-import { ShieldAlert, Zap, Thermometer, Database } from 'lucide-react';
+import { ShieldAlert, Thermometer, Database } from 'lucide-react';
 import './App.css';
 
 function App() {
@@ -83,7 +83,6 @@ function App() {
 
           <RangePredictor
             range={batteryStatus.range}
-            soc={batteryStatus.soc}
           />
 
           <CellGrid voltage={batteryStatus.voltage} />

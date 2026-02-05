@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
     Battery,
     Settings,
@@ -117,8 +117,8 @@ const Header: React.FC<HeaderProps> = ({
                         {/* Simulation Toggle - Premium Design */}
                         <motion.button
                             className={`group relative flex items-center gap-3 px-6 py-2.5 rounded-xl font-bold text-sm tracking-wide transition-all overflow-hidden ${isSimulating
-                                    ? 'text-white'
-                                    : 'text-gray-400 border border-white/10 hover:border-white/20 bg-white/5'
+                                ? 'text-white'
+                                : 'text-gray-400 border border-white/10 hover:border-white/20 bg-white/5'
                                 }`}
                             onClick={onToggleSimulation}
                             whileHover={{ scale: 1.02 }}
